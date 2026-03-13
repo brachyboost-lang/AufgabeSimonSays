@@ -61,35 +61,59 @@ namespace AufgabeSimonSays
         }
         void ShowCombo()
         {
+            lb_yousay.Enabled = false;
+            lb_hafnersays.Enabled = true;
             foreach (Button btn in sequence)
             {
-                btn.BackColor = Color.FromArgb(255, 255, 255);
                 Thread.Sleep(500);
-                btn.BackColor = Color.FromArgb(255, 192, 192);
-            }
-        }
-        void PlayerInput(object btn, EventArgs e)
-        {
-            Button button = btn as Button;
-            if (btn == sequence[Input])
-            {
-                Input++;
-                if (Input == Combo)
+                switch (btn.Name)
                 {
-                    Input = 0;
-                    RndNextCombo();
-                    Thread.Sleep(500);
-                    ShowCombo();
+                    case "bt_red":
+                        btn.BackColor = Color.Red;
+                        Thread.Sleep(500);
+                        btn.BackColor = Color.FromArgb(255, 192, 192);
+                        break;
+                    case "bt_yellow":
+                        btn.BackColor = Color.Yellow;
+                        Thread.Sleep(500);
+                        btn.BackColor = Color.FromArgb(255, 255, 192);
+                        break;
+                    case "bt_green":
+                        btn.BackColor = Color.Green;
+                        Thread.Sleep(500);
+                        btn.BackColor = Color.FromArgb(192, 255, 192);
+                        break;
+                    case "bt_blue":
+                        btn.BackColor = Color.Blue;
+                        Thread.Sleep(500);
+                        btn.BackColor = Color.FromArgb(255, 192, 192);
+                        break;
                 }
             }
-            else
-            {
-                MessageBox.Show("Game Over! Your combo was: " + Combo);
-                Combo = 0;
-                Input = 0;
-                sequence.Clear();
-            }
         }
+            void PlayerInput(object btn, EventArgs e)
+            {
+                Button button = btn as Button;
+                if (btn == sequence[Input])
+                {
+                    Input++;
+                    if (Input == Combo)
+                    {
+                        Input = 0;
+                        RndNextCombo();
+                        Thread.Sleep(500);
+                        ShowCombo();
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Game Over! Your combo was: " + Combo);
+                    Combo = 0;
+                    Input = 0;
+                    sequence.Clear();
+                }
+            }
+        
 
         private void bt_red_Click(object sender, EventArgs e)
         {
