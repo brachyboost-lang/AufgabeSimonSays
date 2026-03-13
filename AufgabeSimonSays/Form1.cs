@@ -10,11 +10,12 @@ using System.Windows.Forms;
 
 namespace AufgabeSimonSays
 {
-    public partial class Form1 : Form
+    public partial class HafnerSays : Form
     {
-        public Form1()
+        public HafnerSays()
         {
             InitializeComponent();
         }
+
     }
 }
