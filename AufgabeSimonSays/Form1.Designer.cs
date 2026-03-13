@@ -47,6 +47,7 @@
             this.bt_red.Size = new System.Drawing.Size(192, 86);
             this.bt_red.TabIndex = 0;
             this.bt_red.UseVisualStyleBackColor = false;
+            this.bt_red.Click += new System.EventHandler(this.bt_red_Click);
             // 
             // bt_yellow
             // 
@@ -56,6 +57,7 @@
             this.bt_yellow.Size = new System.Drawing.Size(192, 86);
             this.bt_yellow.TabIndex = 1;
             this.bt_yellow.UseVisualStyleBackColor = false;
+            this.bt_yellow.Click += new System.EventHandler(this.bt_yellow_Click);
             // 
             // bt_green
             // 
@@ -65,6 +67,7 @@
             this.bt_green.Size = new System.Drawing.Size(192, 86);
             this.bt_green.TabIndex = 2;
             this.bt_green.UseVisualStyleBackColor = false;
+            this.bt_green.Click += new System.EventHandler(this.bt_green_Click);
             // 
             // bt_blue
             // 
@@ -74,6 +77,7 @@
             this.bt_blue.Size = new System.Drawing.Size(192, 86);
             this.bt_blue.TabIndex = 3;
             this.bt_blue.UseVisualStyleBackColor = false;
+            this.bt_blue.Click += new System.EventHandler(this.bt_blue_Click);
             // 
             // bt_start
             // 
@@ -83,6 +87,7 @@
             this.bt_start.TabIndex = 4;
             this.bt_start.Text = "Start";
             this.bt_start.UseVisualStyleBackColor = true;
+            this.bt_start.Click += new System.EventHandler(this.bt_start_Click);
             // 
             // lb_hafnersays
             // 
